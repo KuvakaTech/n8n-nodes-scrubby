@@ -1,0 +1,55 @@
+{
+	"name": "n8n-nodes-scrubby",
+	"version": "0.1.0",
+	"description": "n8n node for Scrubby: verify email addresses, one at a time or in bulk, with quick and deep verification",
+	"license": "MIT",
+	"homepage": "https://github.com/KuvakaTech/n8n-nodes-scrubby#readme",
+	"keywords": [
+		"n8n-community-node-package",
+		"scrubby",
+		"email verification",
+		"email validation",
+		"email deliverability"
+	],
+	"author": {
+		"name": "Scrubby",
+		"email": "developer@scrubby.io"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KuvakaTech/n8n-nodes-scrubby.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "node --test \"test/*.test.js\"",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/ScrubbyApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Scrubby/Scrubby.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^21.1.0",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
