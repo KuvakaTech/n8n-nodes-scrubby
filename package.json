@@ -19,6 +19,9 @@
 		"type": "git",
 		"url": "git+https://github.com/KuvakaTech/n8n-nodes-scrubby.git"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"build": "n8n-node build",
 		"build:watch": "tsc --watch",
